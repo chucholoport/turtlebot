@@ -211,3 +211,18 @@ robot rm
 ```
 
 > **CAUTION:** This operation is destructive. Any non-persisted data inside the container will be permanently lost.
+
+
+## Package Creation
+
+Use the following template to ease the package creation on your workspace:
+
+```sh
+ros2 pkg create turtlebot \
+  --build-type ament_python \
+  --dependencies rclpy \
+  --license "Apache-2.0" \
+  --description "TurtleBot core package" \
+  --maintainer-name "jesus.loport" \
+  --maintainer-email "jesus.loport@outlook.com"
+```

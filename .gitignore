@@ -3,6 +3,10 @@ turtle_ws/build
 turtle_ws/install
 turtle_ws/log
 
+# ROS 2 turtlebot core package
+turtle_ws/src/*
+!turtle_ws/src/turtlebot
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
