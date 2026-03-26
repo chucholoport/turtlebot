@@ -1,0 +1,27 @@
+services:
+
+  ros2:
+    build:
+      context: ../..
+      dockerfile: .docker/arduino_uno_q/Dockerfile
+
+    hostname: chucholoport
+    extra_hosts:
+      - "chucholoport:127.0.0.1"
+
+    container_name: turtlebot
+    network_mode: host
+    stdin_open: true
+    tty: true
+    
+    volumes:
+      - ../../turtle_ws:/turtle_ws
+
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyUSB0:/dev/ttyUSB0
+
+    environment:
+      ROS_DOMAIN_ID: 0
+
+    privileged: true
