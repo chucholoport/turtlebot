@@ -2,10 +2,14 @@
 turtle_ws/build
 turtle_ws/install
 turtle_ws/log
+turtle_ws/src/*
 
 # ROS 2 turtlebot core package
-turtle_ws/src/*
 !turtle_ws/src/turtlebot
+
+# SoC & STM32 bridge package
+!turtle_ws/src/uno_q_bridge
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
