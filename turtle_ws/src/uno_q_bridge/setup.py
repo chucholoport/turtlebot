@@ -11,7 +11,10 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=[
+        'setuptools',
+        'msgpack'
+    ],
     zip_safe=True,
     maintainer='jesus.loport',
     maintainer_email='jesus.loport@outlook.com',
@@ -24,6 +27,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'uno_q_bridge = uno_q_bridge.uno_q_bridge:main',
         ],
     },
 )
