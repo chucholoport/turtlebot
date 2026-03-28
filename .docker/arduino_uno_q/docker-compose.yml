@@ -16,10 +16,8 @@ services:
     
     volumes:
       - ../../turtle_ws:/turtle_ws
-
-    devices:
-      - /dev/ttyACM0:/dev/ttyACM0
-      - /dev/ttyUSB0:/dev/ttyUSB0
+      - ../../test/msgpack_test.py:/test/msgpack_test.py
+      - /var/run/arduino-router.sock:/var/run/arduino-router.sock
 
     environment:
       ROS_DOMAIN_ID: 0

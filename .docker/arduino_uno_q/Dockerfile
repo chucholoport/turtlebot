@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     tmux \
     python3-colcon-common-extensions \
     python3-rosdep \
+    python3-msgpack \
     git \
     && rm -rf /var/lib/apt/lists/*
 
