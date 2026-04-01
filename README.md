@@ -33,21 +33,15 @@ turtlebot/
 │   │   └── Dockerfile
 │   │
 │   └── scripts/               # Utility scripts
+│       ├── .config
 │       ├── dev
 │       ├── rm
 │       └── robot
 │
 ├── turtle_ws/                 # ROS 2 workspace (colcon)
 │   ├── src/
-│   │   └── uno_q_bridge/      # ROS 2 package (ament_python)
-│   │       ├── package.xml
-│   │       ├── setup.py
-│   │       ├── setup.cfg
-│   │       ├── resource/
-│   │       ├── test/
-│   │       └── uno_q_bridge/
-│   │           ├── __init__.py
-│   │           └── uno_q_bridge.py
+│   │   ├── uno_q_bridge/      # ROS 2 package (ament_python)
+│   │   └── turtlebot_core/    # ROS 2 package (ament_python)
 │   │
 │   ├── build/                 # Auto-generated (colcon)
 │   ├── install/               # Auto-generated (colcon)
@@ -62,7 +56,7 @@ turtlebot/
 └── .gitignore
 ```
 
-> **NOTE:** The `src/` directory follows a standard ROS2 colcon workspace layout.
+> **NOTE:** The `turtle_ws/` directory follows a standard ROS2 colcon workspace layout.
 
 
 ## Installation
@@ -233,7 +227,7 @@ robot rm
 Use the following template to ease the package creation on your workspace:
 
 ```sh
-ros2 pkg create turtlebot \
+ros2 pkg create turtlebot_core \
   --build-type ament_python \
   --dependencies rclpy \
   --license "Apache-2.0" \
@@ -276,8 +270,8 @@ The ROS 2 package `uno_q_bridge` implements the connection between the `Arduino 
 
       ```python
       install_requires=[
-         'setuptools',
-         'msgpack'
+         'msgpack',
+         ...
       ],
       ```
 
@@ -353,3 +347,17 @@ data: true
 data: false
 ---
 ```
+
+---
+
+## Author
+
+**Jesus Salvador Lopez Ortega**
+
+Digital Systems & Robotics Engineer, graduated from [Tecnologico de Monterrey Campus Queretaro](https://tec.mx/es/queretaro/)
+
+Software & Robotics professor at [Universidad Politecnica de Santa Rosa](https://upsrj.edu.mx/)
+
+**Contact:**
+- [LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/)
+- [GitHub](https://github.com/chucholoport)
