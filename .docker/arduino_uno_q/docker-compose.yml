@@ -5,12 +5,11 @@ services:
       context: ../..
       dockerfile: .docker/arduino_uno_q/Dockerfile
 
-    hostname: chucholoport
-    extra_hosts:
-      - "chucholoport:127.0.0.1"
-
     container_name: turtlebot
+
     network_mode: host
+    ipc: host
+
     stdin_open: true
     tty: true
     
@@ -22,4 +21,5 @@ services:
     environment:
       ROS_DOMAIN_ID: 0
 
-    privileged: true
+    devices:
+      - /dev/rplidar:/dev/rplidar

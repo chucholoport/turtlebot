@@ -5,7 +5,7 @@ turtle_ws/log
 turtle_ws/src/*
 
 # ROS 2 turtlebot core package
-!turtle_ws/src/turtlebot
+!turtle_ws/src/turtlebot_core
 
 # SoC & STM32 bridge package
 !turtle_ws/src/uno_q_bridge
