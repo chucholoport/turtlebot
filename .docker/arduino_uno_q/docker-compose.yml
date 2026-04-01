@@ -22,4 +22,4 @@ services:
       ROS_DOMAIN_ID: 0
 
     devices:
-      - /dev/rplidar:/dev/rplidar
+      - /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0:/dev/rplidar
